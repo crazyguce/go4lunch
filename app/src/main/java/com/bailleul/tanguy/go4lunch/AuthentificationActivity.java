@@ -2,7 +2,7 @@ package com.bailleul.tanguy.go4lunch;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
+import com.firebase.ui.auth.AuthUI;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,7 +13,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.Arrays;
 
-public class AuthenticationActivity extends AppCompatActivity {
+public class AuthentificationActivity extends AppCompatActivity {
     private ConstraintLayout mainActivityLinearLayout;
     private Button facebookBtn;
     private Button googleBtn;
@@ -69,7 +69,7 @@ public class AuthenticationActivity extends AppCompatActivity {
     private void startSignInActivityGoogle() {
         Log.d(TAG, "startSignInActivityGoogle");
         startActivityForResult(
-                AuthenUi.getInstance()
+                AuthUI.getInstance()
                         .createSignInIntentBuilder()
                         .setAvailableProviders(
                                 Arrays.asList(new AuthUI.IdpConfig.GoogleBuilder().build()))

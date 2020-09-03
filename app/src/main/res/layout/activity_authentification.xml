@@ -6,7 +6,7 @@
     android:id="@+id/mainActivity_constraint_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AuthenticationActivity">
+    tools:context=".AuthentificationActivity">
 
     <ImageView
         android:id="@+id/logo_main"
@@ -60,8 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457"
-        tools:layout_editor_absoluteX="176dp" />
+        app:layout_constraintVertical_bias="0.31" />
 
     <TextView
         app:layout_constraintBottom_toBottomOf="parent"
