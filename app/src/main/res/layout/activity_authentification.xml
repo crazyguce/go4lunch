@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivity_constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AuthenticationActivity">
+
+    <ImageView
+        android:id="@+id/logo_main"
+        app:layout_constraintBottom_toTopOf="@+id/mainActivity_button_login_google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.598"
+        android:layout_width="180dip"
+        android:layout_height="180dip"
+        android:layout_gravity="center_horizontal"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="94dp"
+        android:contentDescription="@string/lunch" />
+
+    <Button
+        android:id="@+id/mainActivity_button_login_facebook"
+        style="?android:attr/borderlessButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainActivity_button_login_google"
+        app:layout_constraintVertical_bias="0.167"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_facebook"
+        android:textColor="#0C0000"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="438dp" />
+
+    <Button
+        android:id="@+id/mainActivity_button_login_google"
+        style="?android:attr/borderlessButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.522"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_google"
+        android:textColor="#040000"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="331dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textColor="@android:color/primary_text_light_nodisable"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/logo_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457"
+        tools:layout_editor_absoluteX="176dp" />
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainActivity_button_login_facebook"
+        app:layout_constraintVertical_bias="0.61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/main_activity_description"
+        android:textAlignment="center"
+        android:textColor="@android:color/primary_text_light_nodisable"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="570dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">go4lunch</string>
+    <string name="main_activity_description">description</string>
+    <string name="login_google">login google</string>
+    <string name="login_facebook">login facebook</string>
+    <string name="lunch">lunch</string>
+</resources>
