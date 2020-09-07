@@ -40,8 +40,8 @@ public class AuthentificationActivity extends AppCompatActivity {
     //links between activity and layout
     private void layoutLinks() {
         mainActivityLinearLayout = findViewById(R.id.mainActivity_constraint_layout);
-        facebookBtn = findViewById(R.id.mainActivity_button_login_facebook);
-        googleBtn = findViewById(R.id.mainActivity_button_login_google);
+        facebookBtn = findViewById(R.id.button_login_facebook);
+        googleBtn = findViewById(R.id.button_login_google);
 
         facebookBtn.setOnClickListener(new View.OnClickListener() {
             @Override
