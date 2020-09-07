@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Go4Lunch</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title" translatable="false">Android Studio</string>
@@ -109,9 +109,50 @@
     <string name="no_internet">No internet available</string>
     <string name="nav_bar_name">nav bar name</string>
     <string name="default_places_search_zoom">Default places search zoom</string>
-    <string name="default_map_zoom">Default map zoom</string>
     <string name="no_internet_image">no internet image</string>
     <string name="no_liked_places_found">no liked places found</string>
     <string name="places_search">places search</string>
     <string name="login_failed">Login failed</string>
+    <string name="app_name">Go4Lunch</string>
+
+    <string name="login_facebook">"S'authentifier avec Facebook"</string>
+    <string name="login_google">"S'authentifier avec Google"</string>
+
+
+    <!-- NAVIGATION DRAWER -->
+    <string name="ND_title">"Go4Lunch"</string>
+    <string name="ND_username">"nom"</string>
+    <string name="ND_email">"email"</string>
+    <string name="ND_lunch_title">"Mon déjeuner"</string>
+    <string name="ND_chat_title">"Chat"</string>
+    <string name="ND_settings_title">"Paramètres"</string>
+    <string name="ND_logout_title">"Se déconnecter"</string>
+    <!-- AUTHENTICATION ACTIVITY -->
+    <string name="error_not_connected">"Vous devez vous connecter !"</string>
+    <string name="error_authentication_canceled">"Authentification annulée"</string>
+    <string name="error_no_internet">"Aucune connexion internet !"</string>
+    <string name="error_unknown_error">"Une erreur inconnue s'est produite"</string>
+    <string name="connection_succeed">"Authentification réussie !"</string>
+    <string name="button_login_text_logged">"Afficher le profil"</string>
+    <string name="button_login_text_not_logged">"Connexion"</string>
+
+    <!-- PROFILE ACTIVITY -->
+    <string name="toolbar_title_login_activity">"Votre Profil"</string>
+    <string name="text_input_username">"Nom d'utilisateur"</string>
+    <string name="text_view_email">"Adresse email :"</string>
+    <string name="button_update_account">"Mettre à jour mon nom"</string>
+    <string name="button_delete_account">"Supprimer mon compte"</string>
+    <string name="button_sign_out_account">"Déconnexion"</string>
+    <string name="info_no_email_found">"Aucune adresse email"</string>
+    <string name="info_no_username_found">"Aucun nom d'utilisateur"</string>
+    <string name="popup_message_confirmation_delete_account">"Es-tu sûr(e) de vouloir supprimer ton compte ?"</string>
+    <string name="popup_message_choice_yes">"Oui !"</string>
+    <string name="popup_message_choice_no">"Non"</string>
+    <string name="logo_go4lunch">"logo"</string>
+    <string name="photo_profile">"photo de profil"</string>
+
+
+    <!-- LUNCH ACTIVITY -->
+    <string name="error">"Une erreur s'est produite"</string>
+
 </resources>
