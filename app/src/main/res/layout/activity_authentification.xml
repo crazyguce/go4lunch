@@ -8,6 +8,26 @@
     android:layout_height="match_parent"
     tools:context=".authentification.AuthentificationActivity">
 
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="258dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="132dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="246dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="0dp"
@@ -22,6 +42,7 @@
         app:srcCompat="@drawable/backgrndblur"
         tools:ignore="ContentDescription" />
 
+
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="0dp"
@@ -35,7 +56,6 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@color/common_google_signin_btn_text_light_default"
         tools:ignore="ContentDescription" />
-
 
     <ImageView
         android:id="@+id/imageView7"
@@ -101,15 +121,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="376dp"
         android:fontFamily="serif"
         android:text="@string/find_restaurants_and_invite_your_friends_to_lunch"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/facebook_login_btn"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.352"
         tools:ignore="UnknownId" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
