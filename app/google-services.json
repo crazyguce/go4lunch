@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "1083841556933-m5b9khl6di65qbtbp5f8iuf646062o7e.apps.googleusercontent.com",
+          "client_id": "1083841556933-h14eq0jbhln3frl11sopdschtlp2tp5a.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.bailleul.tanguy.go4lunch",
-            "certificate_hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+            "certificate_hash": "dd2832a9e30133debb98d838229505c12478fad6"
           }
         },
         {
