@@ -25,7 +25,6 @@
     <string name="google_login_failed">Login failed</string>
     <string name="welcome_back">Welcome back\u0020</string>
     <string name="hasnt_decided_yet">hasn\'t decided yet</string>
-    <string name="eating_at">%s is eating at %s</string>
     <string name="no_address_found">No address found</string>
     <string name="no_name_found">No name found</string>
     <string name="open_now">Open now</string>
@@ -171,6 +170,6 @@
     <string name="open_at">ouvre a</string>
     <string name="open_until">ferme a</string>
     <string name="closed">fermer</string>
-    <string name="google_maps_key">key map</string>
+    <string name="not_decided_ex">n\'est pas decide</string>
 
 </resources>
