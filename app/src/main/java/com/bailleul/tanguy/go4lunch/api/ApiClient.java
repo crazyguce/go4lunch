@@ -1,4 +1,4 @@
-package com.bailleul.tanguy.go4lunch;
+package com.bailleul.tanguy.go4lunch.api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.bailleul.tanguy.go4lunch.R;
 import com.bailleul.tanguy.go4lunch.firestore.UserHelper;
+import com.bailleul.tanguy.go4lunch.view.LunchActivity;
 import com.firebase.ui.auth.AuthUI;
 
 import android.content.Intent;
@@ -35,6 +36,8 @@ public class AuthentificationActivity extends BaseActivity {
     // Identifier for Sign-In Activity
     private static final int RC_SIGN_IN_GOOGLE = 123;
     private static final int RC_SIGN_IN_FACEBOOK = 456;
+    private static final String USER_ID = "userId";
+
 
     @Override
     protected void onStart() {
@@ -172,10 +175,7 @@ public class AuthentificationActivity extends BaseActivity {
         }
     }
 
-    //---------------------
-    // REST REQUEST
-    //---------------------
-    // Http request that create user in firestore
+
 
     private void createUserInFirestore(){
         if (isCurrentUserLogged()) {
@@ -189,7 +189,12 @@ public class AuthentificationActivity extends BaseActivity {
             //}
         }
     }
+     public void startActivity(Intent intent) {
+         Intent activity_lunch = new Intent(this, LunchActivity.class);
+         intent.putExtra(USER_ID, Objects.requireNonNull(this.getCurrentUser()).getUid());
+         startActivity(activity_lunch);
 
+    }
 
 }
 
