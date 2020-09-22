@@ -1,4 +1,4 @@
-package com.bailleul.tanguy.go4lunch;
+package com.bailleul.tanguy.go4lunch.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

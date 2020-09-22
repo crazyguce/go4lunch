@@ -84,8 +84,6 @@ public class ProfileActivity extends BaseActivity {
         });
     }
 
-    @Override
-    public int getFragmentLayout() { return R.layout.activity_profile; }
 
     // --------------------
     // ACTIONS

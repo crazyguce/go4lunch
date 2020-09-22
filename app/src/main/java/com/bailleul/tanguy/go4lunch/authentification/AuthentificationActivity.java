@@ -23,6 +23,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -54,11 +55,13 @@ public class AuthentificationActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authentification);
         layoutLinks();
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-        GoogleSignInClient mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        if (isCurrentUserLogged()) {
+            startActivity();
+        }
+
+
     }
+
 
     @Override
     protected void onResume() {
@@ -66,10 +69,6 @@ public class AuthentificationActivity extends BaseActivity {
         this.updateUIWhenResuming();
     }
 
-    @Override
-    public int getFragmentLayout() {
-        return R.layout.activity_authentification;
-    }
 
     // Retrieves the return of the authentication activity to check if it went well
     @Override
@@ -115,12 +114,15 @@ public class AuthentificationActivity extends BaseActivity {
             googleBtn.setVisibility(View.VISIBLE);
         }
     }
-    @Nullable
-    protected FirebaseUser getCurrentUser(){
-        return FirebaseAuth.getInstance().getCurrentUser(); }
 
-    protected Boolean isCurrentUserLogged(){
-        return (this.getCurrentUser() != null); }
+    @Nullable
+    protected FirebaseUser getCurrentUser() {
+        return FirebaseAuth.getInstance().getCurrentUser();
+    }
+
+    protected Boolean isCurrentUserLogged() {
+        return (this.getCurrentUser() != null);
+    }
 
 
     private void showSnackBar(ConstraintLayout linearLayout, String message) {
@@ -153,16 +155,16 @@ public class AuthentificationActivity extends BaseActivity {
     }
 
     // Method that handles response after SignIn Activity close
-    private void handleResponseAfterSignIn(int requestCode, int resultCode, Intent data){
+    private void handleResponseAfterSignIn(int requestCode, int resultCode, Intent data) {
         IdpResponse response = IdpResponse.fromResultIntent(data);
 
         Log.d(TAG, "handleResponseAfterSignIn");
-        if (requestCode == RC_SIGN_IN_GOOGLE || requestCode == RC_SIGN_IN_FACEBOOK)
-        {
+        if (requestCode == RC_SIGN_IN_GOOGLE || requestCode == RC_SIGN_IN_FACEBOOK) {
             if (resultCode == RESULT_OK) { // SUCCESS
                 Log.d(TAG, "handleResponseAfterSignIn: Success");
                 // CREATE USER IN FIRESTORE
                 this.createUserInFirestore();
+                startActivity();
             } else { // ERRORS
                 if (response == null) {
                     showSnackBar(this.mainActivityConstraintLayout, getString(R.string.error_authentication_canceled));
@@ -176,8 +178,7 @@ public class AuthentificationActivity extends BaseActivity {
     }
 
 
-
-    private void createUserInFirestore(){
+    private void createUserInFirestore() {
         if (isCurrentUserLogged()) {
             // if (UserHelper.getCurrentUserId() == null) {
             Log.d(TAG, "createUserInFirestore");
@@ -189,10 +190,11 @@ public class AuthentificationActivity extends BaseActivity {
             //}
         }
     }
-     public void startActivity(Intent intent) {
-         Intent activity_lunch = new Intent(this, LunchActivity.class);
-         intent.putExtra(USER_ID, Objects.requireNonNull(this.getCurrentUser()).getUid());
-         startActivity(activity_lunch);
+
+    public void startActivity() {
+        Intent intent = new Intent(this, LunchActivity.class);
+        intent.putExtra(USER_ID, Objects.requireNonNull(this.getCurrentUser()).getUid());
+        startActivity(intent);
 
     }
 

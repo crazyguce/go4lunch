@@ -171,5 +171,7 @@
     <string name="open_until">ferme a</string>
     <string name="closed">fermer</string>
     <string name="not_decided_ex">n\'est pas decide</string>
+    <string name="not_decided">na pas choisie</string>
+    <string name="decided">a choisie</string>
 
 </resources>

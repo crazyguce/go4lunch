@@ -11,21 +11,21 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bailleul.tanguy.go4lunch.R;
+import com.bailleul.tanguy.go4lunch.firestore.User;
 import com.bailleul.tanguy.go4lunch.firestore.UserHelper;
 import com.bailleul.tanguy.go4lunch.view.ListOfWorkmatesAdapter;
 import com.bumptech.glide.Glide;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.Query;
-import com.google.firebase.firestore.auth.User;
 
 import io.reactivex.annotations.Nullable;
 
-/public class ListWorkmatesFragment extends Fragment {
+public class ListWorkmatesFragment extends Fragment {
     private ListOfWorkmatesAdapter adapter;
     private RecyclerView recyclerView;
     private String PLACEIDRESTO = "resto_place_id";
 
     public ListWorkmatesFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -51,7 +51,7 @@ import io.reactivex.annotations.Nullable;
         Query allUsers= UserHelper.getAllUsers()
                 .orderBy("restoTodayName", Query.Direction.ASCENDING);
 
-        FirestoreRecyclerOptions<user> options = new FirestoreRecyclerOptions.Builder<User>()
+        FirestoreRecyclerOptions<com.bailleul.tanguy.go4lunch.firestore.User> options = new FirestoreRecyclerOptions.Builder<com.bailleul.tanguy.go4lunch.firestore.User>()
                 .setQuery(allUsers, User.class)
                 .build();
 
