@@ -9,6 +9,8 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
+    <permission android:name="com.bailleul.tanguy.go4lunch.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.bailleul.tanguy.go4lunch.permission.MAPS_RECEIVE"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -51,12 +53,28 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"
             tools:replace="android:value" />
+
         <meta-data
             android:name="com.facebook.sdk.AutoLogAppEventsEnabled"
             android:value="false" />
+
         <meta-data
             android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
             android:value="false" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDXY3XM0WXKc6f7XTEdCYeZAH9xKYYqLqI"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
 
         <activity
             android:name="com.facebook.FacebookActivity"
