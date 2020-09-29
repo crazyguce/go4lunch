@@ -1,4 +1,4 @@
-package com.bailleul.tanguy.go4lunch.lunchfragment;
+package com.bailleul.tanguy.go4lunch.controller.lunchfragment;
 
 import android.annotation.TargetApi;
 import android.content.res.Resources;
@@ -16,11 +16,12 @@ import androidx.fragment.app.Fragment;
 
 import com.bailleul.tanguy.go4lunch.R;
 import com.bailleul.tanguy.go4lunch.util.MyDateFormat;
-import com.bailleul.tanguy.go4lunch.view.DisplayNearbyPlaces;
+import com.bailleul.tanguy.go4lunch.controller.DisplayNearbyPlaces;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 
@@ -92,14 +93,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Display
     //-------------------------------------------------------------------------------------------------------------
     //initializing map
     private void initMap() {
-        MapView mMapView;
-        mMapView = mView.findViewById(R.id.map);
-
-        if (mMapView != null) {
-            mMapView.onCreate(null);
-            mMapView.onResume();
-            mMapView.getMapAsync(this);
-        }
+        SupportMapFragment mapFragment= (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
     }
 
     @TargetApi(Build.VERSION_CODES.M)

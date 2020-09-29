@@ -1,4 +1,4 @@
-package com.bailleul.tanguy.go4lunch.view;
+package com.bailleul.tanguy.go4lunch.controller;
 
 import android.content.Context;
 import android.graphics.Typeface;

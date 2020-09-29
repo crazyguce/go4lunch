@@ -37,9 +37,9 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyDXY3XM0WXKc6f7XTEdCYeZAH9xKYYqLqI" />
 
-        <activity android:name=".view.LunchActivity" />
+        <activity android:name=".controller.LunchActivity" />
         <activity android:name=".authentification.ProfileActivity" />
         <activity android:name=".authentification.AuthentificationActivity">
             <intent-filter>
@@ -62,18 +62,10 @@
             android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
             android:value="false" />
 
-        <meta-data
-            android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDXY3XM0WXKc6f7XTEdCYeZAH9xKYYqLqI"/>
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
 
 
         <activity

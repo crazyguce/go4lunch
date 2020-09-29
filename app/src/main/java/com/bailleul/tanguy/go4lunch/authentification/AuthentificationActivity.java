@@ -5,7 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.bailleul.tanguy.go4lunch.R;
 import com.bailleul.tanguy.go4lunch.firestore.UserHelper;
-import com.bailleul.tanguy.go4lunch.view.LunchActivity;
+import com.bailleul.tanguy.go4lunch.controller.LunchActivity;
 import com.firebase.ui.auth.AuthUI;
 
 import android.content.Intent;
@@ -18,8 +18,6 @@ import com.firebase.ui.auth.ErrorCodes;
 import com.firebase.ui.auth.IdpResponse;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;

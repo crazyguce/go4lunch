@@ -1,4 +1,4 @@
-package com.bailleul.tanguy.go4lunch.lunchfragment;
+package com.bailleul.tanguy.go4lunch.controller.lunchfragment;
 
 import android.os.Bundle;
 

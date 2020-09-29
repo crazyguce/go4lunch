@@ -1,4 +1,4 @@
-package com.bailleul.tanguy.go4lunch.lunchfragment;
+package com.bailleul.tanguy.go4lunch.controller.lunchfragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bailleul.tanguy.go4lunch.R;
 import com.bailleul.tanguy.go4lunch.firestore.User;
 import com.bailleul.tanguy.go4lunch.firestore.UserHelper;
-import com.bailleul.tanguy.go4lunch.view.ListOfWorkmatesAdapter;
+import com.bailleul.tanguy.go4lunch.controller.ListOfWorkmatesAdapter;
 import com.bumptech.glide.Glide;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.Query;
